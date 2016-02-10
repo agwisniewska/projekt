@@ -1,0 +1,29 @@
+.column-bg {
+	background-color: #000033;
+	height: 100%;
+}
+
+.col-md-10 {
+	background-color: white;
+}
+
+h1 {
+	text-align: center;
+	font-size: 80px;
+	font-color: #000033;
+}
+.lead {
+	text-align: center;
+}
+
+.przycisk {
+	text-align: center;
+}
+.calloc {
+	margin-left: 250px;
+	margin-right: 100px;
+}
+.guzik {
+	margin-top: 10px;
+	position: bottom-right;
+}
