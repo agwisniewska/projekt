@@ -19,11 +19,18 @@ h1 {
 .przycisk {
 	text-align: center;
 }
-.calloc {
-	margin-left: 250px;
-	margin-right: 100px;
+.rigth {
+	margin-left: 1200px;
+	margin-right: 300px;
+	
+	
 }
 .guzik {
 	margin-top: 10px;
 	position: bottom-right;
+}
+
+.dwael {
+	margin-top: 50px;
+
 }
