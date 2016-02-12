@@ -16,9 +16,16 @@ $( document ).ready(function() {
     	
     	// if (date in dict.keys().indexOf) {
     	// dict[date] = task
-    	
+    	// dict[date] = task
     	
     	// dict[date].push(task);
+    	if(Object.keys(dict).indexOf(date) < 0) {
+    		dict[date] = new Array()
+    	}
+    	
+    	dict[date].push(task);
+    	 
+    	
     	
     	
     	console.log(dict)
