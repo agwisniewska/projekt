@@ -16,53 +16,56 @@
         <script src="js/moment.min.js"></script>
         <script src="js/bootstrap-datetimepicker.min.js"> </script>
         <script src="js/main.js"> </script>
- 
 
     <div class="container-fluid">
-        
         <div class="row">
             <div class="col-md-1 column-bg"></div>
-
-                <div class="col-md-10">
-                    
+                <div class="col-md-10"> 
                     <div class="row dwael">
-            
                         <div class="col-md-5 left" > 
                             <h1><strong>Make</strong> your life easier</h1>
                         </div> 
-                        
                         <div class="col-md-5 right">
                             <div class="new-form">
                                 <h3> Add task here </h3> 
                                 <div class="form-group">
                                     <div>      
-                                        <fieldset class="form-group">
+                                    <!--     <fieldset class="form-group"> -->
                                         <label for="task">Type in your task here</label>
                                         <input type="text" class="form-control" id="task" placeholder="Type in">
                                         </fieldset>
                                     </div>
-                                    
                                     <div>
                                         <label for="date_task">Choose date you want</label>
                                         <div class='input-group date' id='datetimepicker1'>
-                                            <input type='text' class="form-control"/>
-                                            <span class="input-group-addon">
-                                                <span class="glyphicon glyphicon-calendar"></span>
-                                            </span>
+                                        <input type='text' class="form-control" id="date_task" placeholder="Choose date by clicking calendar"/>
+                                        <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
                                         </div>
-                                    </div>
-                                       
-                                    <button type="button" class="btn btn-success btn-md guzik">SAVE!</button>  
+                                    </div>  
+                                    <button type="button" class="btn btn-success btn-md mainbutton">SAVE</button>  
                                 </div>           
                             </div>
+
                         </div>
+
                     </div>
+
+                    <div class="row threel">
+                      <div id="schedule"><p> </p> </div>
+                      <div class="listoftasks"><p> </p><div>
+                    </div>
+
                 </div>
-                
-            <div class="col-md-1 column-bg"></div>
+  
         </div>
+
+    </div>
+      <div class="col-md-1 column-bg"></div>
+</div>
     
-    </div>   
+  
 
              
       

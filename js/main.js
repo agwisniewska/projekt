@@ -5,7 +5,7 @@ $( document ).ready(function() {
     	
     $('#datetimepicker1').datetimepicker();
 
-    $('.guzik').click(function() { 
+    $('.mainbutton').click(function() { 
     	// console.log("guzik") 
     	var task = $('#task').val() 
     	// var date = $('#date_task').text()
@@ -19,16 +19,30 @@ $( document ).ready(function() {
     	// dict[date] = task
     	
     	// dict[date].push(task);
+       
     	if(Object.keys(dict).indexOf(date) < 0) {
     		dict[date] = new Array()
     	}
     	
     	dict[date].push(task);
-    	 
     	
+        $('#schedule p').empty();
     	
+      
+        
+        for (var i=0; i<=Object.keys(dict).length; i++) {
+    	   $('#schedule p').append(Object.keys(dict)[i]); 
+           var klucz = Object.keys(dict)[i];
+           // console.log(dict[klucz])
+           $('.listoftasks p').append(dict[klucz]); 
+                // console.log(dict[date]);
+           
+
+        }
+                
     	
-    	console.log(dict)
+        // console.log(klucz)
+
 	});
 
 });
