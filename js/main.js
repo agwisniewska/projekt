@@ -2,8 +2,9 @@ $( document ).ready(function() {
     
     var dict = {};
   
-    	
+    
     $('#datetimepicker1').datetimepicker();
+
 
     $('.mainbutton').click(function() { 
     	// console.log("guzik") 
@@ -26,23 +27,38 @@ $( document ).ready(function() {
     	
     	dict[date].push(task);
     	
-        $('#schedule p').empty();
+        $('schedule').empty();
     	
       
         
         for (var i=0; i<=Object.keys(dict).length; i++) {
-    	   $('#schedule p').append(Object.keys(dict)[i]); 
-           var klucz = Object.keys(dict)[i];
+    	   // $('#schedule p').append(Object.keys(dict)[i]); 
+           var key = Object.keys(dict)[i];
            // console.log(dict[klucz])
-           $('.listoftasks p').append(dict[klucz]); 
+           // $('.listoftasks p').append(dict[key]); 
                 // console.log(dict[date]);
            
+           $('.schedule').append(formatData(dict[key], key));
 
         }
+
+        
                 
-    	
-        // console.log(klucz)
+ 
+        // console.log(key)
 
 	});
 
+
 });
+
+
+function formatData(tasks, date) {
+    var resultTask = "";
+    var resultDate = '<h3>' + date + '</h3>'; 
+    for (var i=0; i<tasks.length; i++) {
+        resultTask += ('<p>' + tasks[i] + '</p>')
+    }
+    return("<div>" + resultDate + resultTask + '</div>')
+}
+
