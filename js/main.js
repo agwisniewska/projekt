@@ -4,6 +4,9 @@ $( document ).ready(function() {
   
     $( "#datetimepicker1" ).datetimepicker();
 
+    $(document).on( 'click', '.date', function() {
+        $(this).siblings( ".tasks" ).toggle();
+    });
 
     $('.mainbutton').click(function() { 
     	
@@ -23,22 +26,30 @@ $( document ).ready(function() {
       
         for (var i=0; i<=Object.keys(dict).length; i++) {
            var key = Object.keys(dict)[i];
-           $('.schedule').append(formatData(dict[key], key));
-
+           if (dict[key] !== undefined){
+                $('.schedule').append(formatData(dict[key], key));
+           }
+           // hide();
         }
 
 	});
+
+    
 
 
 });
 
 function formatData(tasks, date) {
+    var resultDate = '<h3 class="date">' + date + '</h3>';
     var resultTask = "";
-    var resultDate = '<h3>' + date + '</h3>'; 
-    for (var i=0; i<tasks.length; i++) {
-        resultTask += ('<p>' + tasks[i] + '</p>')
+    for (var i=0; i < tasks.length; i++) {
+        resultTask += ('<p class="tasks">' + tasks[i] + '</p>')
     }
-    var div = ("<div class='thumbnail tile tile-medium tile-teal'>" + resultDate + resultTask + '</div>')
+    var div = ("<div class='thumbnail tile tile-medium tile-teal'>" + resultDate + resultTask + '</div>');
     return div
+}
+
+function showTask() {
+   
 }
 
