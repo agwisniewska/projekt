@@ -17,10 +17,17 @@
         <script src="js/bootstrap-datetimepicker.min.js"> </script>
         <script src="js/main.js"> </script>
 
+
     <div class="container-fluid">
+        
         <div class="row">
+        
+
             <div class="col-md-1 column-bg"></div>
-                <div class="col-md-10"> 
+                <div class="col-md-10">
+                    <div class="alert alert-success" style= "display: none" id="confirmation">
+                        <strong>Dodałeś nowe zadanie!</strong> 
+                    </div> 
                     <div class="row dwael">
                         <div class="col-md-5 left" > 
                             <h1><strong>Make</strong> your life easier</h1>
@@ -32,7 +39,7 @@
                                     <div>      
                                     <!--     <fieldset class="form-group"> -->
                                         <label for="task">Type in your task here</label>
-                                        <input type="text" class="form-control" id="task" placeholder="Type in">
+                                        <input type="text" class="form-control" id="task" placeholder="Type in" onclick="hideDiv();">
                                         </fieldset>
                                     </div>
                                     <div>

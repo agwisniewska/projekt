@@ -8,6 +8,8 @@ $( document ).ready(function() {
         $(this).siblings( ".tasks" ).toggle();
     });
 
+ 
+    
     $('.mainbutton').click(function() { 
     	
     	var task = $('#task').val() 
@@ -28,16 +30,22 @@ $( document ).ready(function() {
            var key = Object.keys(dict)[i];
            if (dict[key] !== undefined){
                 $('.schedule').append(formatData(dict[key], key));
+                $('.form-control').val("");
+           
+              
+             
            }
-           // hide();
+              
         }
-
+      showAlert();
+     
 	});
 
     
 
-
 });
+
+
 
 function formatData(tasks, date) {
     var resultDate = '<h3 class="date">' + date + '</h3>';
@@ -49,7 +57,23 @@ function formatData(tasks, date) {
     return div
 }
 
-function showTask() {
-   
+
+function showAlert() {
+    var alert = document.getElementById('confirmation');
+        if (alert.style.display === "none") {
+            return alert.style.display = "block";
+        }
+        else {
+            console.log("ok")
+        }
+    
 }
 
+
+function hideDiv() {
+    var zmienna = document.getElementById("confirmation");
+    if (zmienna.style.display === 'block') { 
+        document.getElementById("confirmation").style.display = 'none';
+    }
+    return zmienna
+    };
