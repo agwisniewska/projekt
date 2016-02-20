@@ -1,11 +1,12 @@
-.column-bg {
+/*body {
+	font-family: "Lucida Console";
+	font-weight: bold;
+}*/
+body {
 	background-color: #000033;
-	height: 100%;
+	padding-top: 50px
 }
 
-.col-md-10 {
-	background-color: white;
-}
 
 h1 {
 	text-align: center;
@@ -19,15 +20,10 @@ h1 {
 .przycisk {
 	text-align: center;
 }
-.rigth {
-	margin-left: 1200px;
-	margin-right: 300px;
+
+.btn {
+	margin-top: 8px;
 	
-	
-}
-.guzik {
-	margin-top: 10px;
-	position: bottom-right;
 }
 
 .dwael {
@@ -35,10 +31,31 @@ h1 {
 
 }
 
-.col-md-1 {
-	height: 100%;
-}
 
 .thumbnail p {
 	display: none; 
 }
+
+.thumbnail {
+	border-radius: solid 1px;
+
+	text-align: center;
+	margin-top: 50px;
+}
+
+h3 {
+	margin-top:  10px;
+	margin-bottom: 10px;
+}
+
+.form-control {
+	margin-top: 5px;
+	margin-bottom:  5px;
+}
+
+.white-bg {
+	background-color: white;
+	padding-bottom: 100px;
+	padding-top: 30px
+}
+

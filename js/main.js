@@ -7,15 +7,12 @@ $( document ).ready(function() {
     $(document).on( 'click', '.date', function() {
         $(this).siblings( ".tasks" ).toggle();
     });
-
- 
     
     $('.mainbutton').click(function() { 
     	
     	var task = $('#task').val() 
     	
     	var date = $("#datetimepicker1").find("input").val();
-    	
        
     	if(Object.keys(dict).indexOf(date) < 0) {
     		dict[date] = new Array()
@@ -24,7 +21,6 @@ $( document ).ready(function() {
     	dict[date].push(task);
     	
         $('.schedule').empty();
-    	
       
         for (var i=0; i<=Object.keys(dict).length; i++) {
            var key = Object.keys(dict)[i];
@@ -37,14 +33,11 @@ $( document ).ready(function() {
            }
               
         }
-      showAlert();
+        showAlert();
      
 	});
 
-    
-
 });
-
 
 
 function formatData(tasks, date) {
@@ -60,20 +53,15 @@ function formatData(tasks, date) {
 
 function showAlert() {
     var alert = document.getElementById('confirmation');
-        if (alert.style.display === "none") {
-            return alert.style.display = "block";
-        }
-        else {
-            console.log("ok")
-        }
-    
+    if (alert.style.display === "none") {
+        return alert.style.display = "block";
+    }
+    else {
+        console.log("ok")
+    }
 }
 
 
 function hideDiv() {
-    var zmienna = document.getElementById("confirmation");
-    if (zmienna.style.display === 'block') { 
-        document.getElementById("confirmation").style.display = 'none';
-    }
-    return zmienna
-    };
+    $('#confirmation').fadeOut( "slow" );
+};
