@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Make your day </title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/moj.css" rel="stylesheet">
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js">
+        </script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/moment.min.js"></script>
+        <script src="js/bootstrap-datetimepicker.min.js"> </script>
+        <script src="js/app.js"> </script>
+        <script src="js/MainController.js"> </script>
+
+     
+
+	</head>
+	<body ng-app="myApp">
+		 
+	
+       
+
+
+
+
+    <div class="container-fluid" ng-controller="TasksController">
+        
+        <div class="row">
+        
+                <div class="col-md-10 col-md-offset-1 white-bg">
+                <div class="alert alert-success" style= "display: none" id="confirmation">
+                        <strong>Dodałeś nowe zadanie!</strong> 
+                    </div> 
+                    <div class="row dwael">
+                        <div class="col-md-5" ng-controller="MainController"> 
+                            <h1> {{ title | uppercase }} </h1>
+                        </div> 
+                        <div class="col-md-1" ></div> 
+                        <div class="col-md-5">
+                            <div class="new-form" ng-controller="MainController">
+                                <h3> {{ tasktitle }} </h3> 
+                                <div class="form-group">
+                                    <div>      
+                                        <label for="task">Type in your task</label>
+                                        <input type="text" class="form-control" id="task" ng-model="taskname">
+                                        </fieldset>
+                                    </div>
+                                    <div>
+                                        <label for="date_task">Type in date</label>
+                                        <input type="text" class="form-control" id="date" ng-model="datename">
+                                      
+                                    </div>  
+                                    <button type="button" class="btn btn-success btn-md mainbutton"  ng-click="createTask(datename, taskname)">Create </button>  
+                                </div>           
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row threel">
+                      <div id="schedule"><p> </p> </div>
+                      <div class="listoftasks"><p> </p><div>
+                    </div>
+
+                </div>
+  
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="schedule"   >
+                    <div ng-repeat="day in days">
+                    <div class='thumbnail tile tile-medium tile-teal'> <h3 ng-click="show = !show">{{ day.day }} </h3>
+                    <p ng-repeat="task in day.tasks" ng-show="show"> {{ task }} </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+</div>
+    
+  
