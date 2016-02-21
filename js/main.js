@@ -2,7 +2,10 @@ $( document ).ready(function() {
     
     var dict = {};
   
-    $( "#datetimepicker1" ).datetimepicker();
+   
+   $('#datetimepicker1').datetimepicker();
+   $('#datetimepicker1').data("DateTimePicker").format('MM/DD/YYYY')
+ 
 
     $(document).on( 'click', '.date', function() {
         $(this).siblings( ".tasks" ).toggle();
@@ -65,3 +68,8 @@ function showAlert() {
 function hideDiv() {
     $('#confirmation').fadeOut( "slow" );
 };
+
+// function showDangerAlert() {
+//     var alert = document.getElementById('danger');
+//     if (alert.style.display === "none")
+// }
