@@ -8,7 +8,7 @@ The instruction how to run project.
  
 2. Next as you clone repository, find it in your computer folder (f.e. Desktop)
 
-3. Then find a file index.html and doubleclick on it 
-(to open Angularjs project doubleclick on folder projektAngular, find index.html and doubleclick on it) 
+3. Then find a file index.html and doubleclick on it to open it in browser. 
+(to open Angularjs project doubleclick on folder projektAngular, find index.html and doubleclick on it to open it in browser) 
 
 4. Here it is!
